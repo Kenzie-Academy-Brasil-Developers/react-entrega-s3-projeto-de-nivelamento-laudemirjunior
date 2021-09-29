@@ -1,4 +1,4 @@
-const Card = ({ currentSale }) => {
+const Card = ({ currentSale, setCurrentSale }) => {
   const totalPrice = () => {
     return currentSale.reduce((acc, total) => acc + total.price, 0).toFixed(2);
   };
@@ -7,6 +7,10 @@ const Card = ({ currentSale }) => {
     return currentSale
       .reduce((acc, total) => acc + total.discount, 0)
       .toFixed(2);
+  };
+
+  const handleClick = (product) => {
+    setCurrentSale(currentSale.filter((item) => item.code !== product));
   };
 
   return (
@@ -28,6 +32,9 @@ const Card = ({ currentSale }) => {
               <td>{item.description}</td>
               <td>{item.price}</td>
               <td>{item.discount}</td>
+              <td>
+                <button onClick={() => handleClick(item.code)}>X</button>
+              </td>
             </tr>
           );
         })}

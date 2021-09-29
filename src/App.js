@@ -41,7 +41,7 @@ function App() {
         currentSale={currentSale}
         setCurrentSale={setCurrentSale}
       />
-      <Card currentSale={currentSale} />
+      <Card currentSale={currentSale} setCurrentSale={setCurrentSale} />
     </div>
   );
 }
