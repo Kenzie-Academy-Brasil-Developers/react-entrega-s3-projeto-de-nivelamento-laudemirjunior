@@ -28,7 +28,7 @@ const Add = ({ products, setProducts }) => {
         <input
           placeholder="Código do produto"
           value={inputCode}
-          onChange={() => setInputCode}
+          onChange={(e) => setInputCode(e.target.value)}
         ></input>
       </div>
       <div>
@@ -36,7 +36,7 @@ const Add = ({ products, setProducts }) => {
         <input
           placeholder="Nome do produto"
           value={inputName}
-          onChange={() => setInputName}
+          onChange={(e) => setInputName(e.target.value)}
         ></input>
       </div>
       <div>
@@ -44,7 +44,7 @@ const Add = ({ products, setProducts }) => {
         <input
           placeholder="Descrição do produto"
           value={inputDescription}
-          onChange={() => setInputDescription}
+          onChange={(e) => setInputDescription(e.target.value)}
         ></input>
       </div>
       <div>
@@ -52,7 +52,7 @@ const Add = ({ products, setProducts }) => {
         <input
           placeholder="Preço do produto"
           value={inputPrice}
-          onChange={() => setInputPrice}
+          onChange={(e) => setInputPrice(e.target.value)}
         ></input>
       </div>
       <div>
@@ -60,7 +60,7 @@ const Add = ({ products, setProducts }) => {
         <input
           placeholder="Desconto do produto"
           value={inputDiscount}
-          onChange={() => setInputDiscount}
+          onChange={(e) => setInputDiscount(e.target.value)}
         ></input>
       </div>
       <button onClick={() => handleClick()}>Adicionar produto</button>
