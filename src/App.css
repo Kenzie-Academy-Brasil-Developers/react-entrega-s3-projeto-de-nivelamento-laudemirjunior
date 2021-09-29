@@ -1,0 +1,40 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+}
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add > div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 12px;
+}
+
+table,
+td,
+th,
+td {
+  border: 2px solid white;
+  font-size: 14px;
+  padding: 2px;
+}
+
+.display {
+  margin: 1rem 0;
+  max-width: 900px;
+}
+
+.sale {
+  color: red;
+}
